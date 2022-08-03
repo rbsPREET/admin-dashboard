@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-mono
+}
+
+@layer components {
+
+html::-webkit-scrollbar {
+    @apply w-[1vw]
+}
+    
+html::-webkit-scrollbar-thumb {
+    @apply bg-primary
+}
+    
+html::-webkit-scrollbar-track {
+    @apply bg-secondary
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    @apply w-[0.5vw] h-[0.5vw]
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-secondary
+}
+
+}
+
+.line-clamp-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    max-height: 50px;
+    line-height: 1.26;
+}
